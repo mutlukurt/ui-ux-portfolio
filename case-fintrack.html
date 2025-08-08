@@ -1,0 +1,75 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FinTrack — Personal Finance Dashboard — Case Study</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css"></head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">Avery<span class="brand-dot">.</span></a>
+      <nav class="nav-links" style="display:none;gap:24px">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px">
+        <button class="menu-btn" aria-label="Open menu" id="openMenu">≡</button>
+        <a href="index.html#contact" class="btn btn-primary">Let’s talk</a>
+      </div>
+    </div>
+    <div class="backdrop" id="backdrop"></div>
+    
+    <aside class="drawer" id="drawer" aria-hidden="true">
+      <button class="close" id="closeMenu">×</button>
+      <div class="profile">
+        <div class="avatar"></div>
+        <div>
+          <div class="title">Avery Stone</div>
+          <div class="subtitle">UI/UX Designer</div>
+        </div>
+      </div>
+      <nav class="menu">
+        <a href="index.html#about"><span class="icon"></span><span class="text">About<small>Bio & focus</small></span></a>
+        <a href="index.html#work"><span class="icon"></span><span class="text">Work<small>Selected projects</small></span></a>
+        <a href="index.html#services"><span class="icon"></span><span class="text">Services<small>What I offer</small></span></a>
+        <a href="index.html#contact"><span class="icon"></span><span class="text">Contact<small>Get in touch</small></span></a>
+        <a href="resume.pdf" target="_blank" rel="noopener"><span class="icon"></span><span class="text">Resume (PDF)<small>1 page</small></span></a>
+      </nav>
+      <div class="footer">
+        <div class="socials">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Dribbble">🏀</a>
+          <a href="#" aria-label="GitHub">🐙</a>
+        </div>
+      </div>
+    </aside>
+    
+  </header>
+
+<main class="container">
+  <section class="section"><span class="badge">Fintech</span><h1>FinTrack — Personal Finance Dashboard</h1></section>
+  <section class="section">
+    <img loading="lazy" decoding="async" src="assets/img/fintrack-hero.jpg" alt="FinTrack — Personal Finance Dashboard hero" class="shadow">
+    <img loading="lazy" decoding="async" src="assets/img/fintrack-shot1.jpg" alt="FinTrack — Personal Finance Dashboard screen A" class="shadow" style="margin-top:12px">
+    <img loading="lazy" decoding="async" src="assets/img/fintrack-shot2.jpg" alt="FinTrack — Personal Finance Dashboard screen B" class="shadow" style="margin-top:12px">
+    <p><a href="index.html">← Back to Home</a></p>
+  </section>
+</main>
+
+  <footer>
+    <div class="container wrap">
+      <div class="muted">© <span id="y"></span> Mutlu Kurt. MIT Licensed.</div>
+      <div style="display:flex;gap:18px;font-size:.95rem">
+        <a href="#">GitHub</a>
+        <a href="#">Twitter</a>
+        <a href="LICENSE">MIT License</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/app.js"></script>
+
+</body></html>
