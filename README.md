@@ -7,56 +7,56 @@ Curated UI/UX case studies presented as a lightweight static website (HTML/CSS/J
 - Live: https://mutlukurt.github.io/ui-ux-portfolio/
 - Repo: https://github.com/mutlukurt/ui-ux-portfolio
 
-## Özellikler
+## Features
 
-- Modern, yalın arayüz (ışık tema)
-- Sticky header ve çekmeceli (drawer) mobil navigasyon
-- Seçilmiş çalışmalar için görsel kartlar
-- İletişim formu (Formspree entegrasyonu)
+- Modern, minimal light theme
+- Sticky header with mobile drawer navigation
+- Visual cards for selected works
+- Contact form (Formspree integration)
 
-## Performans İyileştirmeleri (2025)
+## Performance Improvements (2025)
 
-- Header: `backdrop-filter: blur()` kaldırıldı; GPU compositing için `transform: translateZ(0)` eklendi.
-- Arka plan efektleri: Blur yoğunluğu düşürüldü; 900px altı ekranlarda arka plan blobları kapatıldı.
-- Görseller: Kart görsellerine `aspect-ratio: 16/9` ve `object-fit: cover`; liste ve case sayfalarındaki görsellere `fetchpriority="low"`, `loading="lazy"`, `decoding="async"`.
-- JS: Drawer aç/kapat mantığı tek ve idempotent hale getirildi; Escape ile kapama + bfcache dönüşünde otomatik kapama eklendi.
-- Mobil gölgeler: Box-shadow yoğunluğu azaltıldı.
-- Erişilebilirlik / hareket: `prefers-reduced-motion` için arka plan kapatma genişletildi.
+- Header: removed `backdrop-filter: blur()`; added `transform: translateZ(0)` to leverage GPU compositing.
+- Background effects: reduced blur intensity; disabled background blobs below 900px for smoother scrolling.
+- Images: added `aspect-ratio: 16/9` and `object-fit: cover` for cards; used `fetchpriority="low"`, `loading="lazy"`, and `decoding="async"` on list/case images.
+- JavaScript: consolidated drawer open/close into a single, idempotent controller; added Escape-to-close and auto-close on bfcache restore.
+- Mobile shadows: lowered box-shadow to reduce paint cost.
+- Motion/accessibility: expanded `prefers-reduced-motion` support to disable background effects.
 
-Bu değişiklikler özellikle mobil cihazlarda ve düşük/orta segment CPU'larda kaydırma takılmalarını azaltır, ana iş parçacığının yükünü düşürür ve boyama/blur maliyetlerini düşürür.
+These changes reduce scroll jank on mobile and lower-end CPUs by cutting main-thread work and expensive paints/blurs.
 
-## Teknoloji
+## Tech Stack
 
 - Vanilla HTML, CSS, JavaScript
-- Harici bağlam: Formspree (iletişim formu)
+- External service: Formspree (contact form)
 
-## Lokal Geliştirme
+## Local Development
 
-Seçenek 1: Dosyayı direkt açın
+Option 1: Open the file directly
 
-1. Proje klasöründe `index.html` dosyasını tarayıcıda açın.
+1. Open `index.html` in your browser.
 
-Seçenek 2: Basit statik sunucu
+Option 2: Run a simple static server
 
 ```bash
 npx serve .
-# veya
+# or
 python3 -m http.server 5173
 ```
 
-Tarayıcıda `http://localhost:5173` adresine gidin (port farklı olabilir).
+Then visit `http://localhost:5173` (port may vary).
 
-## Dağıtım (GitHub Pages)
+## Deployment (GitHub Pages)
 
-Bu depo statik bir site olduğundan ek build adımı gerekmez.
+This repository is a static site; no build step is required.
 
-1. GitHub’da repo sayfasına gidin: Settings → Pages
+1. In the repository, go to Settings → Pages
 2. Source: `Deploy from a branch`
-3. Branch: `main` ve `/ (root)` klasörü
-4. Kaydedin; site şu adreste yayınlanır: `https://<kullanici>.github.io/<repo-adi>/`
+3. Branch: `main` and folder: `/ (root)`
+4. Save — your site will be live at: `https://<username>.github.io/<repository>/`
 
-Not: Yukarıdaki Live Demo bağlantısı GitHub Pages etkinleştirildikten sonra çalışır. Özel alan adı kullanacaksanız `Settings → Pages` ekranından domaini ekleyip HTTPS’i zorunlu kılın.
+Note: The Live Demo link above works after GitHub Pages is enabled. For a custom domain, set it in Settings → Pages and enforce HTTPS.
 
-## Lisans
+## License
 
-MIT — bkz. `LICENSE`
+MIT — see `LICENSE`
